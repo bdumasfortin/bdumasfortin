@@ -1,8 +1,8 @@
-## Welcome to my GitHub profile <visitor>
+## Welcome to my GitHub profile visitor
 
-```javacript
+```javascript
 onVisitorEntered(evt) {
-  let visitorName = evt && evt.visitor ? evt.visitor : '<visitor>'
+  let visitorName = evt && evt.visitor ? evt.visitor : 'visitor'
   this.setTitle(`Welcome to my GitHub profile ${visitorName}`;
 
   this.backendService.logVisitorPromise(visitorName)
