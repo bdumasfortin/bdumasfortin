@@ -1,9 +1,9 @@
-## Welcome to my GitHub profile visitor
+## Welcome to my GitHub profile!
 
 ```javascript
 onVisitorEntered(evt) {
-  let visitorName = evt && evt.visitor ? evt.visitor : 'visitor'
-  this.setTitle(`Welcome to my GitHub profile ${visitorName}`;
+  let visitorName = evt && evt.visitor ? evt.visitor : '';
+  this.setTitle(`Welcome to my GitHub profile ${visitorName}!`;
 
   this.backendService.logVisitorPromise(visitorName)
                      .catch(error => console.error('Could not log visitor:', error)); 
@@ -15,11 +15,11 @@ public LogVisitorResponse LogVisitor(LogVisitorEvent evt)
 {
   try
   {
-    m_Logger.Instance.LogVisitor(evt.Name);
+    _logger.Instance.LogVisitor(evt.Name);
   }
   catch (Exception ex)
   {
-    return new LogVisitorResponse("An error occured :(");
+    return new LogVisitorResponse("An unexpected error occured :(");
   }
 }
 ```
